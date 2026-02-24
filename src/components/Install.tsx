@@ -7,7 +7,7 @@ const methods = [
     id: "marketplace",
     label: "Plugin Marketplace",
     badge: "Recommended",
-    command: "claude plugin marketplace add Krrish109/StreamRAG",
+    command: "claude plugin marketplace add Krrish2004/StreamRAG",
     description: "One command. Installs from the official Claude Code plugin marketplace.",
   },
   {
@@ -32,7 +32,7 @@ const methods = [
     id: "local",
     label: "Local Development",
     badge: null,
-    command: `git clone https://github.com/Krrish109/StreamRAG.git
+    command: `git clone https://github.com/Krrish2004/StreamRAG.git
 cd StreamRAG
 pip install -e ".[dev]"`,
     description: "Clone the repo and install in development mode for contributing.",

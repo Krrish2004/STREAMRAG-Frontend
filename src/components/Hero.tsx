@@ -96,12 +96,27 @@ export default function Hero() {
       <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-violet/5 blur-[100px] pointer-events-none" />
 
       <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-cyan/20 bg-cyan/5 mb-8 animate-[float_3s_ease-in-out_infinite]">
-          <span className="w-2 h-2 rounded-full bg-neon animate-pulse" />
-          <span className="text-xs font-medium font-[family-name:var(--font-jetbrains-mono)] text-cyan tracking-wider uppercase">
-            Open Source &middot; All Rights Reserved
-          </span>
+        {/* Badges */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-cyan/20 bg-cyan/5 animate-[float_3s_ease-in-out_infinite]">
+            <span className="w-2 h-2 rounded-full bg-neon animate-pulse" />
+            <span className="text-xs font-medium font-[family-name:var(--font-jetbrains-mono)] text-cyan tracking-wider uppercase">
+              Open Source
+            </span>
+          </div>
+          <a
+            href="https://doi.org/10.65138/ijtrp.2026.v2i2.15"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-violet/30 bg-violet/5 hover:bg-violet/10 transition-colors animate-[float_3s_ease-in-out_infinite_0.5s]"
+          >
+            <svg className="w-3.5 h-3.5 text-violet" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+            <span className="text-xs font-medium font-[family-name:var(--font-jetbrains-mono)] text-violet tracking-wider uppercase">
+              Published Research Paper
+            </span>
+          </a>
         </div>
 
         {/* Headline */}

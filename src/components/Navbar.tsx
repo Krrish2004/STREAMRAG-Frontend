@@ -7,6 +7,7 @@ const navLinks = [
   { label: "Architecture", href: "#architecture" },
   { label: "Benchmarks", href: "#benchmarks" },
   { label: "Languages", href: "#languages" },
+  { label: "Paper", href: "https://doi.org/10.65138/ijtrp.2026.v2i2.15", external: true },
   { label: "Install", href: "#install" },
 ];
 
@@ -65,13 +66,14 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
+              {...("external" in link && link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               className="text-sm text-muted hover:text-cyan transition-colors duration-300 font-medium"
             >
               {link.label}
             </a>
           ))}
           <a
-            href="https://github.com/Krrish109/StreamRAG"
+            href="https://github.com/Krrish2004/StreamRAG"
             target="_blank"
             rel="noopener noreferrer"
             className="px-4 py-2 text-sm font-semibold rounded-lg bg-cyan/10 text-cyan border border-cyan/20 hover:bg-cyan/20 hover:border-cyan/40 transition-all duration-300"
@@ -108,7 +110,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="https://github.com/Krrish109/StreamRAG"
+            href="https://github.com/Krrish2004/StreamRAG"
             target="_blank"
             rel="noopener noreferrer"
             className="block text-sm font-semibold text-cyan py-2"

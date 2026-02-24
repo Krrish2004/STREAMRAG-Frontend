@@ -124,7 +124,7 @@ export default function CTASection() {
             Install StreamRAG
           </a>
           <a
-            href="https://github.com/Krrish109/StreamRAG"
+            href="https://github.com/Krrish2004/StreamRAG"
             target="_blank"
             rel="noopener noreferrer"
             className="px-10 py-4 rounded-xl font-semibold text-foreground border border-border hover:border-cyan/40 hover:bg-cyan/5 transition-all duration-300 text-lg flex items-center gap-2"

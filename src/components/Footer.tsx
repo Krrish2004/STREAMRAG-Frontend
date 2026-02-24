@@ -56,8 +56,8 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5">
               {[
-                { label: "Documentation", href: "#" },
-                { label: "GitHub", href: "https://github.com/Krrish109/StreamRAG" },
+                { label: "Research Paper", href: "https://doi.org/10.65138/ijtrp.2026.v2i2.15" },
+                { label: "GitHub", href: "https://github.com/Krrish2004/StreamRAG" },
                 { label: "Benchmarks", href: "#benchmarks" },
                 { label: "Architecture", href: "#architecture" },
               ].map((link) => (
@@ -82,7 +82,7 @@ export default function Footer() {
                 { label: "Features", href: "#features" },
                 { label: "Languages", href: "#languages" },
                 { label: "Install", href: "#install" },
-                { label: "License", href: "https://github.com/Krrish109/StreamRAG/blob/main/LICENSE" },
+                { label: "License", href: "https://github.com/Krrish2004/StreamRAG/blob/main/LICENSE" },
               ].map((link) => (
                 <li key={link.label}>
                   <a
@@ -104,7 +104,7 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-4">
             <a
-              href="https://github.com/Krrish109/StreamRAG"
+              href="https://github.com/Krrish2004/StreamRAG"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted hover:text-cyan transition-colors"
