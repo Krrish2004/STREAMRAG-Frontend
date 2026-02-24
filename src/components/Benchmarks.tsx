@@ -148,7 +148,7 @@ export default function Benchmarks() {
 
         {/* Footnote */}
         <p className="text-center text-xs text-muted mt-8 font-[family-name:var(--font-jetbrains-mono)]">
-          Benchmark: Incredible-Voice (18K LOC) &middot; Model: Claude Sonnet 4.5
+          Benchmark: Production App (18K LOC) &middot; Model: Claude Sonnet 4.5
           &middot; 10 tasks across 4 categories
         </p>
       </div>

@@ -145,7 +145,7 @@ export default function Install() {
         <div className="mt-12 grid sm:grid-cols-3 gap-4">
           {[
             { label: "Python", value: "3.9+", color: "#3776ab" },
-            { label: "License", value: "MIT", color: "#39ff14" },
+            { label: "License", value: "Proprietary", color: "#39ff14" },
             { label: "Size", value: "20K+ LOC", color: "#00f0ff" },
           ].map((req) => (
             <div

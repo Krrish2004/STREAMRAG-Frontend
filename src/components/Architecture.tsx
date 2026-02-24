@@ -1,5 +1,7 @@
 "use client";
 
+import AnimatedPipeline from "./AnimatedPipeline";
+
 const layers = [
   {
     id: "mcp",
@@ -53,14 +55,6 @@ const layers = [
   },
 ];
 
-const pipeline = [
-  { step: "Edit", time: "0.00ms", color: "#64748b" },
-  { step: "Extract AST", time: "0.02ms", color: "#00f0ff" },
-  { step: "Compute Delta", time: "0.01ms", color: "#39ff14" },
-  { step: "Patch Graph", time: "0.01ms", color: "#8b5cf6" },
-  { step: "Resolve Edges", time: "0.01ms", color: "#f59e0b" },
-  { step: "Propagate", time: "0.00ms", color: "#00f0ff" },
-];
 
 export default function Architecture() {
   return (
@@ -145,54 +139,8 @@ export default function Architecture() {
           </div>
         </div>
 
-        {/* Incremental Pipeline */}
-        <div className="max-w-5xl mx-auto">
-          <h3 className="font-[family-name:var(--font-space-grotesk)] text-2xl font-bold text-center mb-8">
-            Incremental Pipeline{" "}
-            <span className="text-cyan font-[family-name:var(--font-jetbrains-mono)] text-lg">
-              (0.05ms total)
-            </span>
-          </h3>
-
-          <div className="flex flex-wrap items-center justify-center gap-2">
-            {pipeline.map((step, i) => (
-              <div key={step.step} className="flex items-center gap-2">
-                <div
-                  className="px-4 py-3 rounded-lg border text-center min-w-[120px] transition-all duration-300 hover:scale-105"
-                  style={{
-                    borderColor: `${step.color}30`,
-                    backgroundColor: `${step.color}08`,
-                  }}
-                >
-                  <div
-                    className="text-sm font-semibold font-[family-name:var(--font-space-grotesk)]"
-                    style={{ color: step.color }}
-                  >
-                    {step.step}
-                  </div>
-                  <div className="text-xs text-muted font-[family-name:var(--font-jetbrains-mono)] mt-1">
-                    {step.time}
-                  </div>
-                </div>
-                {i < pipeline.length - 1 && (
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    className="text-muted shrink-0"
-                  >
-                    <path
-                      d="M7 4l6 6-6 6"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      fill="none"
-                    />
-                  </svg>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
+        {/* Animated Incremental Pipeline */}
+        <AnimatedPipeline />
 
         {/* Edge Types */}
         <div className="max-w-3xl mx-auto mt-20">

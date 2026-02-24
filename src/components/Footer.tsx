@@ -39,8 +39,7 @@ export default function Footer() {
             </div>
             <p className="text-sm text-muted max-w-sm leading-relaxed mb-4">
               Real-time incremental code graph engine that gives Claude Code
-              structural superpowers. Open source, MIT licensed, built for
-              production.
+              structural superpowers. Open source, built for production.
             </p>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-neon animate-pulse" />
@@ -83,7 +82,7 @@ export default function Footer() {
                 { label: "Features", href: "#features" },
                 { label: "Languages", href: "#languages" },
                 { label: "Install", href: "#install" },
-                { label: "MIT License", href: "https://github.com/Krrish109/StreamRAG/blob/main/LICENSE" },
+                { label: "License", href: "https://github.com/Krrish109/StreamRAG/blob/main/LICENSE" },
               ].map((link) => (
                 <li key={link.label}>
                   <a
@@ -101,7 +100,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 pt-6 border-t border-border/30 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted font-[family-name:var(--font-jetbrains-mono)]">
-            &copy; {new Date().getFullYear()} StreamRAG. Open source under MIT License.
+            &copy; {new Date().getFullYear()} StreamRAG. All Rights Reserved.
           </p>
           <div className="flex items-center gap-4">
             <a

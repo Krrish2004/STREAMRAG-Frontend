@@ -1,12 +1,13 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import AnimatedCounter from "./AnimatedCounter";
 
 const stats = [
-  { value: "15", label: "MCP Tools", color: "text-cyan" },
-  { value: "0.05ms", label: "Per Update", color: "text-neon" },
-  { value: "1700+", label: "Tests Passing", color: "text-violet" },
-  { value: "7", label: "Languages", color: "text-cyan" },
+  { numValue: 15, suffix: "", label: "MCP Tools", color: "text-cyan" },
+  { numValue: 0.05, suffix: "ms", label: "Per Update", color: "text-neon", decimals: 2 },
+  { numValue: 1700, suffix: "+", label: "Tests Passing", color: "text-violet" },
+  { numValue: 7, suffix: "", label: "Languages", color: "text-cyan" },
 ];
 
 export default function Hero() {
@@ -99,7 +100,7 @@ export default function Hero() {
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-cyan/20 bg-cyan/5 mb-8 animate-[float_3s_ease-in-out_infinite]">
           <span className="w-2 h-2 rounded-full bg-neon animate-pulse" />
           <span className="text-xs font-medium font-[family-name:var(--font-jetbrains-mono)] text-cyan tracking-wider uppercase">
-            Open Source &middot; MIT License
+            Open Source &middot; All Rights Reserved
           </span>
         </div>
 
@@ -151,11 +152,13 @@ export default function Hero() {
               className="relative group"
             >
               <div className="p-4 rounded-xl border border-border/50 bg-surface/50 backdrop-blur-sm hover:border-cyan/30 transition-all duration-500">
-                <div
+                <AnimatedCounter
+                  end={stat.numValue}
+                  suffix={stat.suffix}
+                  decimals={stat.decimals || 0}
+                  duration={2000}
                   className={`font-[family-name:var(--font-space-grotesk)] text-3xl sm:text-4xl font-bold metric-value ${stat.color}`}
-                >
-                  {stat.value}
-                </div>
+                />
                 <div className="text-xs text-muted mt-1 font-medium tracking-wide uppercase">
                   {stat.label}
                 </div>
